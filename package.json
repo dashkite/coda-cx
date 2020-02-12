@@ -1,5 +1,5 @@
 {
-  "name": "hydrogen-docs-cx",
+  "name": "coda-cx",
   "version": "0.0.1",
   "description": "Web Components for use with Hydrogen Docs",
   "main": "build/index.js",
@@ -25,10 +25,15 @@
   "dependencies": {
     "panda-parchment": "^6.0.3",
     "@dashkite/carbon": "file:../carbon",
-    "@dashkite/hydrogen": "file:../hyrogen",
+    "@dashkite/hydrogen": "file:../hydrogen",
     "@dashkite/helium": "file:../helium"
   },
   "devDependencies": {
-    "panda-9000": "^5.0.2"
+    "@dashkite/vogue": "file:../vogue",
+    "coffeescript": "^2.5.1",
+    "panda-9000": "^5.0.2",
+    "panda-quill": "^5.0.0",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7"
   }
 }

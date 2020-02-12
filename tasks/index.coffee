@@ -6,7 +6,7 @@ import {go, map, wait, tee, reject} from "panda-river"
 import coffee from "coffeescript"
 import pug from "pug"
 import _stylus from "stylus"
-import markdown from "marked"
+import vogue from "@dashkite/vogue"
 
 
 {define, run, glob, read, write,
@@ -44,13 +44,14 @@ define "html", ->
     tee ({source, target}) ->
       stylus = (code) ->
         _stylus.render code,
+          use: vogue
           filename: source.path
 
       target.content = do ->
         code = pug.compileClient source.content,
           filename: source.path
           name: "f"
-          filters: {stylus, markdown}
+          filters: {stylus}
         "#{code}\n\nmodule.exports = f"
     # map extension ".js"
     map write "./build"
