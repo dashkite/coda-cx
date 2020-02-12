@@ -1,24 +1,25 @@
-import markdown from "marked"
 import {Gadget, mixin, tag, bebop, shadow,
-  render, properties, events, local} from "panda-play"
+  render, properties, events, local,
+  describe, resource, smart} from "@dashkite/carbon"
 import {dashed} from "panda-parchment"
 
-import {lookup, links} from "@dashkite/hydrogen"
+import Store from "@dashkite/hydrogen"
+import Registry from "@dashkite/helium"
 
-import {navigate, describe, resource} from "../mixins"
-import {smart} from "../combinators"
 
-import template from "./index.pug"
+import template from "./template"
 
 class extends Gadget
 
   mixin @, [
 
-    tag "site-variables"
+    tag "coda-variables"
 
-    bebop, shadow, describe, navigate
+    bebop, shadow, describe #, navigate
 
-    resource -> lookup "path", @dom.dataset.path
+    getter cms: -> Registry.get @description.store ? "cms"
+
+    resource -> Store.get @cms, key: "path", index: @dom.dataset.path
 
     properties
       view: get: ->

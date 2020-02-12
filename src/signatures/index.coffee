@@ -1,22 +1,23 @@
 import {Gadget, mixin, tag, bebop, shadow,
-  render, properties, events, local} from "panda-play"
+  render, properties, events, local,
+  describe, resource, smart} from "@dashkite/carbon"
 import {dashed} from "panda-parchment"
-import {lookup} from "@dashkite/hydrogen"
+import Store from "@dashkite/hydrogen"
+import Registry from "@dashkite/helium"
 
-import {navigate, describe, resource} from "../mixins"
-import {smart} from "../combinators"
-
-import template from "./index.pug"
+import template from "./template.pug"
 
 class extends Gadget
 
   mixin @, [
 
-    tag "site-signatures"
+    tag "coda-signatures"
 
-    bebop, shadow, describe, navigate
+    bebop, shadow, describe #, navigate
 
-    resource -> lookup "path", @dom.dataset.path
+    getter cms: -> Registry.get @description.store ? "cms"
+
+    resource -> Store.get @cms, index: "path", key: @dom.dataset.path
 
     render smart template
 

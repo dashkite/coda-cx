@@ -1,0 +1,34 @@
+{
+  "name": "hydrogen-docs-cx",
+  "version": "0.0.1",
+  "description": "Web Components for use with Hydrogen Docs",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "p9k test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashkite/hydrogen-docs-cx.git"
+  },
+  "keywords": [
+    "Web",
+    "components",
+    "documentation",
+    "hydrogen"
+  ],
+  "author": "Dan Yoder",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/dashkite/hydrogen-docs-cx/issues"
+  },
+  "homepage": "https://github.com/dashkite/hydrogen-docs-cx#readme",
+  "dependencies": {
+    "panda-parchment": "^6.0.3",
+    "@dashkite/carbon": "file:../carbon",
+    "@dashkite/hydrogen": "file:../hyrogen",
+    "@dashkite/helium": "file:../helium"
+  },
+  "devDependencies": {
+    "panda-9000": "^5.0.2"
+  }
+}
