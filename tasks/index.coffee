@@ -31,7 +31,7 @@ define "js", ->
         transpile:
           presets: [[
             resolve "@babel/preset-env"
-            targets: node: "13.6"
+            targets: node: "current"
           ]]
     map extension ".js"
     map write "./build"
@@ -53,6 +53,6 @@ define "html", ->
           name: "f"
           filters: {stylus}
         "#{code}\n\nmodule.exports = f"
-    # map extension ".js"
+    map extension ".js"
     map write "./build"
   ]
