@@ -23,10 +23,11 @@
   },
   "homepage": "https://github.com/dashkite/hydrogen-docs-cx#readme",
   "dependencies": {
-    "panda-parchment": "^6.0.3",
     "@dashkite/carbon": "file:../carbon",
+    "@dashkite/helium": "file:../helium",
     "@dashkite/hydrogen": "file:../hydrogen",
-    "@dashkite/helium": "file:../helium"
+    "@dashkite/hydrogen-cx": "file:../hydrogen-cx",
+    "panda-parchment": "^6.0.3"
   },
   "devDependencies": {
     "@dashkite/vogue": "file:../vogue",

@@ -16,17 +16,17 @@ article
 
   +wikitext(summary, "text/markdown")(data-path = parent)
 
-  site-signatures(data-path = path)
+  coda-signatures(data-path = path)
 
-  site-variables(data-path = path)
+  coda-variables(data-path = path)
 
   +wikitext(description)(data-path = parent)
 
-  site-block(data-key = `${path}/description`)
+  hydrogen-block(data-key = `${path}/description`)
     h2 Description
 
-  site-blocks(data-glob = `${path}/example/*`)
+  hydrogen-blocks(data-glob = `${path}/example/*`)
     h2 Example
 
-  site-blocks(data-glob = `${path}/examples/*`)
+  hydrogen-blocks(data-glob = `${path}/examples/*`)
     h2 Examples
