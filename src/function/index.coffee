@@ -17,7 +17,7 @@ class extends Gadget
 
     getter cms: -> Registry.get @description.store ? "cms"
 
-    resource -> Store.get @cms, index: "path", key: @dom.dataset.path
+    resource -> Store.get @cms, index: "path", key: @description.path
 
     render smart template
 

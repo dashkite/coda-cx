@@ -19,7 +19,7 @@ class extends Gadget
 
     getter cms: -> Registry.get @description.store ? "cms"
 
-    resource -> Store.get @cms, key: "path", index: @dom.dataset.path
+    resource -> Store.get @cms, key: "path", index: @description.path
 
     properties
       view: get: ->
