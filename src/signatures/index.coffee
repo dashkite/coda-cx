@@ -27,7 +27,7 @@ class extends Gadget
           if @value?
             {parent, category, scope, name} = @value
             if category == "method"
-              type = await lookup "path", parent
+              type = await Store.get @cms, index: "path", key: parent
               scoped:
                 switch scope
                   when "class" then type.name
