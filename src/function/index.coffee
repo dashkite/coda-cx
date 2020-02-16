@@ -27,5 +27,5 @@ class extends Gadget
           if @value?
             {parent, category} = @value
             if category == "method"
-              type: await lookup "path", parent
+              type: await Store.get @cms, index: "path", key: parent
   ]
